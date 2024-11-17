@@ -12,12 +12,12 @@ export default function Header() {
     <nav className="">
       <div className="flex w-[100vmax] h-[9vmin] overflow-hidden justify-around text-[white] bg-[#131921] items-center">
       <div className="flex w-[8%] h-4/5 ml-4 mr-4 justify-center items-center no-underline hover:border-[1px] hover:border-[solid] hover:border-[white] hover:rounded-[3px]">
-        <img className="w-4/5 max-w-[7rem] h-4/5" src="public/icon.png" />
+        <img className="w-4/5 max-w-[7rem] h-4/5" src="src\assets\icon.png" />
         <span className="-mt-[7%]">.in</span>
       </div>
 
       <div className="[@media(width<1200px)]:w-[80px] [@media(width<1200px)]:ml-4 [@media(width<1200px)]:mr-4 hover:border-[1px] hover:border-[solid] hover:border-[white] hover:rounded-[3px] flex flex-row justify-around items-center w-[9.5em] h-[90%]">
-        <img className="w-4 mr-[5px] mt-[15px]" src="public/assets/location-icon.svg" alt="" />
+        <img className="w-4 mr-[5px] mt-[15px]" src="src\assets\location-icon.svg" alt="" />
         <div className="update-location">
           <div className="up">Delivering to </div>
           <div className="text-[1em] font-[bolder]">Update Location</div>
@@ -39,7 +39,7 @@ export default function Header() {
         </div>
         <NavLink className="navlink" to="/cart">
           <div className="flex gap-[5px] w-[30px] mr-20">
-            <img className = 'w-[40px] h-[40px]' src="public/assets/cart.svg" alt="Cart" />
+            <img className = 'w-[40px] h-[40px]' src="src\assets\cart.svg" alt="Cart" />
             <div className="mt-[13px] text-[1em] font-[bolder]">Cart</div>
           </div>
         </NavLink>

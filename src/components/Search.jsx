@@ -19,7 +19,7 @@ export default function Search() {
           <option value="All">Baby </option>
         </select>
         <input className='border-[none] w-full text-[medium] pl-[25px] min-w-[4rem] text-black' type="text" placeholder="Search Amazon.in" />
-        <button className="bg-[#eeb162] border-[none] hover:bg-[#df8d21] w-[5.5rem] rounded-tr-[7px] rounded-br-[7px] outline-[none] flex justify-center item-center" alt=""><img className='w-8' src='public/assets/search.svg'></img></button>
+        <button className="bg-[#eeb162] border-[none] hover:bg-[#df8d21] w-[5.5rem] rounded-tr-[7px] rounded-br-[7px] outline-[none] flex justify-center item-center" alt=""><img className='w-8' src='src\assets\search.svg'></img></button>
       </div>
       
   )

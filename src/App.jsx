@@ -7,15 +7,15 @@ import Card from "./components/Card";
 export default function App() {
   const [vis, setVis] = useState(false);
 
-
+  const [products, setProducts]=useState(items);
   return (
     <div className="font-['Amazon_Ember'] m-0 p-0 box-border overflow-x-hidden bg-zinc-200">
-      <Header />
+      <Header products={products} setProducts={setProducts} />
      
 
       {vis ? <SideBar /> : null}
       <div className="grid grid-cols-4 gap-4 overflow-auto p-4">
-        {items.map((item) => (
+        {products.map((item) => (
           <Card
             key={item.product_id}
             id={item.product_id}

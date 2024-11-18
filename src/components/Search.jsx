@@ -1,7 +1,11 @@
 import React from 'react'
 import searchIcon from "/search.svg"
+import prod from './item.json'
+export default function Search({products, setProducts}) {
+  const searchItem=(item)=>{
+        setProducts(prod.filter((product)=>product.product_name.toLowerCase().includes(item.trim().toLowerCase()))) 
+  }
 
-export default function Search() {
   return (
     <div className="[@media(width<1200px)]:w-[90%] flex h-4/5 flex-[1] w-[550px] m-[20px] justify-center content-center">
         <select className='bg-[#d8c9c9] text-zinc-800 w-16 pl-[4px] rounded-tl-[7px] rounded-bl-[7px] border-[none] border-r-[1px_solid_gray]' name="All" id="All">
@@ -19,7 +23,7 @@ export default function Search() {
           <option value="All">Amazon Devices</option>
           <option value="All">Baby </option>
         </select>
-        <input className='border-[none] w-full text-[medium] pl-[25px] min-w-[4rem] text-black' type="text" placeholder="Search Amazon.in" />
+        <input className='border-[none] w-full text-[medium] pl-[25px] min-w-[4rem] text-black' type="text" placeholder="Search Amazon.in" onChange={(e)=>{searchItem(e.target.value)}} />
         <button className="bg-[#eeb162] border-[none] hover:bg-[#df8d21] w-[5.5rem] rounded-tr-[7px] rounded-br-[7px] outline-[none] flex justify-center item-center" alt=""><img className='w-8' src={searchIcon}></img></button>
       </div>
       

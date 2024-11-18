@@ -2,7 +2,7 @@ import React from "react";
 import Search from "./Search";
 import { NavLink } from "react-router-dom";
 import Card from "./Card";
-
+import icon from '../assets/icon.png'
 export default function Header() {
   const topics = [
     'Fresh Products', 'Sell', 'Best Seller', 'Today Deals', 'Mobiles',
@@ -12,10 +12,10 @@ export default function Header() {
     <nav className="">
       <div className="flex w-[100vmax] h-[9vmin] overflow-hidden justify-around text-[white] bg-[#131921] items-center">
       <div className="flex w-[8%] h-4/5 ml-4 mr-4 justify-center items-center no-underline hover:border-[1px] hover:border-[solid] hover:border-[white] hover:rounded-[3px]">
-        <img className="w-4/5 max-w-[7rem] h-4/5" src="src\assets\icon.png" />
+        <img className="w-4/5 max-w-[7rem] h-4/5" src={icon} />
         <span className="-mt-[7%]">.in</span>
       </div>
-      
+
 
       <div className="[@media(width<1200px)]:w-[80px] [@media(width<1200px)]:ml-4 [@media(width<1200px)]:mr-4 hover:border-[1px] hover:border-[solid] hover:border-[white] hover:rounded-[3px] flex flex-row justify-around items-center w-[9.5em] h-[90%]">
         <img className="w-4 mr-[5px] mt-[15px]" src="src\assets\location-icon.svg" alt="" />

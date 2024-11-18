@@ -15,6 +15,7 @@ export default function Header() {
         <img className="w-4/5 max-w-[7rem] h-4/5" src="src\assets\icon.png" />
         <span className="-mt-[7%]">.in</span>
       </div>
+      
 
       <div className="[@media(width<1200px)]:w-[80px] [@media(width<1200px)]:ml-4 [@media(width<1200px)]:mr-4 hover:border-[1px] hover:border-[solid] hover:border-[white] hover:rounded-[3px] flex flex-row justify-around items-center w-[9.5em] h-[90%]">
         <img className="w-4 mr-[5px] mt-[15px]" src="src\assets\location-icon.svg" alt="" />

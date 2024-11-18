@@ -3,6 +3,8 @@ import Search from "./Search";
 import { NavLink } from "react-router-dom";
 import Card from "./Card";
 import icon from "/icon.png"
+import locationIcon from "/location-icon.svg"
+import cartIcon from "/cart.svg"
 export default function Header() {
   const topics = [
     'Fresh Products', 'Sell', 'Best Seller', 'Today Deals', 'Mobiles',
@@ -18,7 +20,7 @@ export default function Header() {
 
 
       <div className="[@media(width<1200px)]:w-[80px] [@media(width<1200px)]:ml-4 [@media(width<1200px)]:mr-4 hover:border-[1px] hover:border-[solid] hover:border-[white] hover:rounded-[3px] flex flex-row justify-around items-center w-[9.5em] h-[90%]">
-        <img className="w-4 mr-[5px] mt-[15px]" src="src\assets\location-icon.svg" alt="" />
+        <img className="w-4 mr-[5px] mt-[15px]" src={locationIcon} alt="" />
         <div className="update-location">
           <div className="up">Delivering to </div>
           <div className="text-[1em] font-[bolder]">Update Location</div>
@@ -40,7 +42,7 @@ export default function Header() {
         </div>
         <NavLink className="navlink" to="/cart">
           <div className="flex gap-[5px] w-[30px] mr-20">
-            <img className = 'w-[40px] h-[40px]' src="src\assets\cart.svg" alt="Cart" />
+            <img className = 'w-[40px] h-[40px]' src={cartIcon} alt="Cart" />
             <div className="mt-[13px] text-[1em] font-[bolder]">Cart</div>
           </div>
         </NavLink>

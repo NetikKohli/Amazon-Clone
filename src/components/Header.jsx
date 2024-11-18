@@ -2,7 +2,7 @@ import React from "react";
 import Search from "./Search";
 import { NavLink } from "react-router-dom";
 import Card from "./Card";
-import icon from '../assets/icon.png'
+import icon from "/icon.png"
 export default function Header() {
   const topics = [
     'Fresh Products', 'Sell', 'Best Seller', 'Today Deals', 'Mobiles',

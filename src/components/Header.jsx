@@ -2,58 +2,72 @@ import React from "react";
 import Search from "./Search";
 import { NavLink } from "react-router-dom";
 import Card from "./Card";
-import icon from "/icon.png"
-import locationIcon from "/location-icon.svg"
-import cartIcon from "/cart.svg"
+import icon from "/icon.png";
+import locationIcon from "/location-icon.svg";
+import cartIcon from "/cart.svg";
+
 export default function Header() {
   const topics = [
-    'Fresh Products', 'Sell', 'Best Seller', 'Today Deals', 'Mobiles',
-    'Electronics', 'Home and Kitchen', 'Amazon Pay', 'New Release',
+    "Fresh Products", "Sell", "Best Seller", "Today's Deals", "Mobiles",
+    "Electronics", "Home and Kitchen", "Amazon Pay", "New Release",
   ];
+
   return (
-    <nav className="">
-      <div className="flex w-[100vmax] h-[9vmin] overflow-hidden justify-around text-[white] bg-[#131921] items-center">
-      <div className="flex w-[8%] h-4/5 ml-4 mr-4 justify-center items-center no-underline hover:border-[1px] hover:border-[solid] hover:border-[white] hover:rounded-[3px]">
-        <img className="w-4/5 max-w-[7rem] h-4/5" src={icon} />
-        <span className="-mt-[7%]">.in</span>
-      </div>
+    <nav>
+      {/* Top Navigation */}
+      <div className="flex w-full h-[9vmin] items-center justify-around bg-[#131921] text-white">
+        {/* Amazon Logo */}
+        <div className="flex items-center ml-4 mr-4 hover:border hover:border-white hover:rounded">
+          <img className="w-4/5 max-w-[7rem] h-4/5" src={icon} alt="Amazon" />
+          <span className="-mt-[7%]">.in</span>
+        </div>
 
+        {/* Location */}
+        <div className="flex items-center w-[10%] hover:border hover:border-white hover:rounded">
+          <img className="w-4 mr-2" src={locationIcon} alt="Location" />
+          <div>
+            <div className="text-sm">Deliver to</div>
+            <div className="font-bold">Update Location</div>
+          </div>
+        </div>
 
-      <div className="[@media(width<1200px)]:w-[80px] [@media(width<1200px)]:ml-4 [@media(width<1200px)]:mr-4 hover:border-[1px] hover:border-[solid] hover:border-[white] hover:rounded-[3px] flex flex-row justify-around items-center w-[9.5em] h-[90%]">
-        <img className="w-4 mr-[5px] mt-[15px]" src={locationIcon} alt="" />
-        <div className="update-location">
-          <div className="up">Delivering to </div>
-          <div className="text-[1em] font-[bolder]">Update Location</div>
+        {/* Search Bar */}
+        <div className="flex-1">
+          <Search />
+        </div>
+
+        {/* Right Navigation */}
+        <div className="flex items-center gap-8">
+          {/* Sign-In */}
+          <NavLink className="text-white no-underline hover:underline" to="/signin">
+            <div>
+              <div className="text-sm">Hello, Sign in</div>
+              <div className="font-bold">Accounts & Lists</div>
+            </div>
+          </NavLink>
+
+          {/* Returns & Orders */}
+          <div>
+            <div className="text-sm">Returns</div>
+            <div className="font-bold">& Orders</div>
+          </div>
+
+          {/* Cart */}
+          <NavLink to="/cart" className="flex items-center gap-2 text-white no-underline hover:underline">
+            <img className="w-10 h-10" src={cartIcon} alt="Cart" />
+            <div className="font-bold">Cart</div>
+          </NavLink>
         </div>
       </div>
-      <div className="mid-nav">
-        <Search />
-      </div>
-      <div className="[@media(width<1200px)]:hidden flex w-auto gap-[60px] justify-between">
-        <NavLink className="text-[white] no-underline" to="/signin">
-          <div className="hover:cursor-pointer">
-            <div className="text-[1em]">Hello,sign in</div>
-            <div className="text-[1em] font-[bolder]">Accounts & Lists</div>
-          </div>
-        </NavLink>
-        <div>
-          <div className="text-[1em]">Returns</div>
-          <div className="text-[1em] font-[bolder]">& Orders</div>
-        </div>
-        <NavLink className="navlink" to="/cart">
-          <div className="flex gap-[5px] w-[30px] mr-20">
-            <img className = 'w-[40px] h-[40px]' src={cartIcon} alt="Cart" />
-            <div className="mt-[13px] text-[1em] font-[bolder]">Cart</div>
-          </div>
-        </NavLink>
-      </div>
-      </div>
-      <div className='bg-[#232f3e] h-10 items-center flex text-white flex-row justify-around'>
+
+      {/* Bottom Navigation */}
+      <div className="bg-[#232f3e] flex justify-around items-center h-10 text-white">
         {topics.map((item, index) => (
-          <div key={index}>{item}</div>
+          <div key={index} className="hover:underline cursor-pointer">
+            {item}
+          </div>
         ))}
-      </div>  
+      </div>
     </nav>
-
   );
 }
